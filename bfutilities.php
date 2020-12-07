@@ -13,8 +13,6 @@ defined('_JEXEC') or die;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Plugin\CMSPlugin;
 
-//Factory::getLanguage()->load('plg_content_bfdate', __DIR__);
-
 class plgContentbfutilities extends CMSPlugin
 {
 	public function onContentPrepare($context, &$article, &$params, $limitstart)
