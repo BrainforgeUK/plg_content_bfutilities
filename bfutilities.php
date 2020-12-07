@@ -10,7 +10,6 @@
 // No direct access
 defined('_JEXEC') or die;
 
-use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Plugin\CMSPlugin;
 
@@ -41,8 +40,14 @@ class plgContentbfutilities extends CMSPlugin
 				{
 					case 'date':
 						return date($matches[2]);
-					case 'translate':
-						return $this->prepareContent(Text::_($matches[2]));
+					case 'text':
+						$args = explode(',', $matches[2]);
+						if (count($args) == 1)
+						{
+							return $this->prepareContent(Text::_($matches[2]));
+						}
+
+						return $this->prepareContent(call_user_func_array('Joomla\CMS\Language\Text::sprintf', $args));
 					default:
 						return $matches[0];
 				}
