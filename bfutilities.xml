@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8.0" type="plugin" group="content" method="upgrade">
+    <name>PLG_CONTENT_BFUTILITIES</name>
+    <creationDate>December 2020</creationDate>
+    <author>Jonathan Brain</author>
+    <authorEmail>brainforge.uk@btinternet.com</authorEmail>
+    <authorUrl>https://www.brainforge.co.uk</authorUrl>
+    <copyright>Copyright 2020 Jonathan Brain. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>1.0.0</version>
+
+    <description>PLG_CONTENT_BFUTILITIES_XML_DESCRIPTION</description>
+
+    <files>
+        <filename plugin="bfutilities">bfutilities.php</filename>
+        <folder>language</folder>
+    </files>
+
+    <updateservers>
+        <server type="extension" priority="1" name="PLG_CONTENT_BFDATE">
+            https://brainforge.co.uk/component/bfupdater?element=plg_content_bfutilities.xml
+        </server>
+    </updateservers>
+</extension>
