@@ -14,7 +14,7 @@ use Joomla\CMS\Plugin\CMSPlugin;
 // No direct access
 defined('_JEXEC') or die;
 
-class plgContentbfutilities extends CMSPlugin
+class plgContentBfutilities extends CMSPlugin
 {
 	public function onContentPrepare($context, &$article, &$params, $limitstart)
 	{
